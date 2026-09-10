@@ -1,4 +1,9 @@
+import argparse
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.parse_args()
+
     print("Hello from basic-calculator!")
 
 def add(x: int, y: int) -> int:
