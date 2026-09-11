@@ -1,8 +1,13 @@
 import argparse
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog="Calculator", description="A basic integer calculator",)
+    parser.add_argument('add')
+    parser.add_argument('sub')
+    parser.add_argument('mul')
+    parser.add_argument('div')
     parser.parse_args()
+
 
     print("Hello from basic-calculator!")
 
