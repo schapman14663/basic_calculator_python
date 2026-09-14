@@ -5,7 +5,7 @@ from os import wait
 def main() -> None:
     parser = argparse.ArgumentParser(prog="Calculator", description="A basic integer calculator",)
     parser.add_argument('-a', '--add', action="store_true")
-    parser.add_argument('-s', '--sub')
+    parser.add_argument('-s', '--sub', action="store_true")
     parser.add_argument('-m', '--mul')
     parser.add_argument('-d', '--div')
     parser.add_argument('x', type=int, help="The first number you want to use in your calculation")
@@ -41,7 +41,8 @@ def main() -> None:
         print(args)
     
     if args.sub:
-        return subtract(x, y)
+        ans = subtract(args.x, args.y)
+        print(str(ans))
 
 
 
